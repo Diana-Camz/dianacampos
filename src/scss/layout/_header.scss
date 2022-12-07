@@ -1,0 +1,14 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.saludo {
+  background-color: pink;
+  color: white;
+
+  
+}
+p {
+  color: white;
+  background-color: pink;
+  font-size: 50px;
+}
