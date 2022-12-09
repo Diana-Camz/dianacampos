@@ -1,14 +1,11 @@
 @use 'base/variables' as v;
 @use 'base/mixins' as m;
 
-.saludo {
-  background-color: pink;
-  color: white;
 
-  
-}
-p {
-  color: white;
-  background-color: pink;
-  font-size: 50px;
+.imagen img{
+  width: 50%;
+  height: 50%;
+  background-size:cover;
+  background-position-x: right;
+  margin: 0 0 0 auto;
 }

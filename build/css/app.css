@@ -1,3 +1,54 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700;900&display=swap");
+/*---------use--------*/
+/*---------globals--------*/
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: popp;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  background: #1A191A;
+  color: #FFFFFF;
+}
+
+/*---------links--------*/
+a {
+  text-decoration: none;
+}
+
+/*---------images-------*/
+img {
+  width: 100%;
+  display: block;
+}
+
+/*---------titles--------*/
+h1 {
+  font-size: 3.8rem;
+}
+
+h2 {
+  font-size: 3.4rem;
+}
+
+h3 {
+  font-size: 3rem;
+}
+
+h4 {
+  font-size: 2.6rem;
+}
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -307,13 +358,10 @@ template {
   display: none;
 }
 
-.saludo {
-  background-color: pink;
-  color: white;
-}
-
-p {
-  color: white;
-  background-color: pink;
-  font-size: 50px;
+.imagen img {
+  width: 50%;
+  height: 50%;
+  background-size: cover;
+  background-position-x: right;
+  margin: 0 0 0 auto;
 }

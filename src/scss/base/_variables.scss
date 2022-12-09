@@ -1,17 +1,25 @@
-//Tipografía
-$fuente_principal: "Montserrat", sans-serif;
 
-//Colores
-$verde: #4cbbb3;
-$rosa: #f53756;
-$amarillo: #fef46d;
-$morado: #752f97;
-$negro: #000000;
-$blanco: #ffffff;
-$rojo: red;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700;900&display=swap');
 
-//tamaños de media queries
+// Fuentes
+$fuente_principal:'Poppins', sans-serif;
+
+// Tamaño de Media Queries
 $telefono: 480px;
 $tablet: 768px;
-$desktop: 992px;
-$desktopXL: 1200px;
+$desktop: 1024px;
+
+// Colores
+$negro: #1A191A;
+$blanco: #FFFFFF;
+$gris: #e1e1e1;
+$grisOscuro: #333333;
+$rojo: red;
+
+$separacion: 5rem;
+
+// Fuentes
+$delgada: 300;
+$regular : 400;
+$bold: 700;
+$black: 900;
