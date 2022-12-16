@@ -8,7 +8,10 @@ const webp = require('gulp-webp');
 const notify = require('gulp-notify');
 
 //JAVASCRIPT
+const sourcemaps = require('gulp-sourcemaps');
 const terser = require('gulp-terser-js');
+const concat = require('gulp-concat');
+const rename = require('gulp-rename');
 
 const paths = {
   scss: 'src/scss/**/*.scss',
@@ -25,12 +28,14 @@ function css(done) {
   done();
 }
 
-function javascript(done) {
-  src("src/js/**/*.js")
+function javascript() {
+  return src(paths.js)
+    .pipe(sourcemaps.init())
+    .pipe(concat('bundle.js'))
     .pipe(terser())
-    .pipe(dest("build/js"))
-
-  done();
+    .pipe(sourcemaps.write('.'))
+    .pipe(rename({ suffix: '.min' }))
+    .pipe(dest('./build/js'))
 }
 
 function dev(done){

@@ -58,9 +58,30 @@
         <h1>About me</h1>
         <p>I am a Psychologist looking for the job of my dreams, which allows me to set new goals, feel new motivations within a challenging environment that challenges my knowledge and skills. All within the endless learning that the IT area provides. I enjoy well-structured code and am passionate about knowing that it can always improve. I am currently a Web Development student on my own, and if I am not practicing you can find me exercising or enjoying the afternoon with my boyfriend or my cats.</p>
         <div class="tab-titles">
-          <p class="tab-links">Skills</p>
-          <p class="tab-links">Experience</p>
-          <p class="tab-links">Education</p>
+          <p class="tab-links skills">Skills</p>
+          <p class="tab-links experience">Experience</p>
+          <p class="tab-links education">Education</p>
+        </div>
+        <div class="tab-contents skillsCont">
+          <ul>
+            <li><span>Skill 1</span><br>Insert your skill</li>
+            <li><span>Skill 2</span><br>Insert your skill</li>
+            <li><span>Skill 3</span><br>Insert your skill</li>
+          </ul>
+        </div>
+        <div class="tab-contents experienceCont">
+          <ul>
+            <li><span>Experience 1</span><br>Insert your experience</li>
+            <li><span>Experience 2</span><br>Insert your experience</li>
+            <li><span>Experience 3</span><br>Insert your experience</li>
+          </ul>
+        </div>
+        <div class="tab-contents educationCont">
+          <ul>
+            <li><span>Education 1</span><br>Insert your education</li>
+            <li><span>Education 2</span><br>Insert your education</li>
+            <li><span>Education 3</span><br>Insert your education</li>
+          </ul>
         </div>
       </div>
     </div>    
@@ -68,7 +89,8 @@
 </section>
 
 <p>holaaaaaaaaaaaa</p>
-<!--<script src="/build/js/bundle.min.js"></script>-->
+<script src="build/js/bundle.min.js"></script>
+
 </body>
 </html>
 

@@ -445,20 +445,54 @@ nav ul li a:hover::after {
 }
 .row .about-col-2 h1 {
   font-size: 5rem;
-  font-weight: 700;
+  font-weight: 600;
   color: #FFFFFF;
   margin-bottom: 1.2rem;
 }
 .row .about-col-2 p {
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   text-align: justify;
 }
 .row .about-col-2 .tab-titles {
   display: flex;
-  margin: 2rem 0 4rem;
+  margin: 2rem 0 2.5rem;
 }
 .row .about-col-2 .tab-links {
   margin-right: 5rem;
   font-size: 1.8rem;
   font-weight: 400;
+  cursor: pointer;
+  position: relative;
+}
+.row .tab-links::after {
+  content: "";
+  width: 0%;
+  height: 0.3rem;
+  background: #ff004f;
+  position: absolute;
+  left: 0;
+  bottom: -0.8rem;
+  transition: 0.5s;
+}
+.row .tab-links:hover::after {
+  width: 50%;
+}
+.row .tab-links.active-link::after {
+  width: 50%;
+}
+.row .tab-contents ul li {
+  list-style: none;
+  margin: 1rem 0;
+  font-size: 1.6rem;
+}
+.row .tab-contents ul li span {
+  color: #b54769;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+.row .tab-contents {
+  display: none;
+}
+.row .tab-contents.active-tab {
+  display: block;
 }
