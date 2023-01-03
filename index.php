@@ -10,6 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700;900&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/dec3fe7f9b.js" crossorigin="anonymous"></script>
   <title>Personal Portfolio Website</title>
 </head>
 <body>
@@ -19,8 +20,8 @@
     <nav>
       <a href="/" class="image-logo-name">  <!--LOGO IMAGE NAME-->
         <picture>
-          <source loading="lazy" srcset="build/img/logo_name.webp" type="image/webp">
-          <img loading="lazy" src="src/img/logo_name.webp" alt="Logo Image">
+          <source loading="lazy" srcset="build/img/image-logo.webp" type="image/webp">
+          <img loading="lazy" src="src/img/image-logo.jpg" alt="Logo Image">
         </picture>
       </a>
       <ul>
@@ -88,8 +89,99 @@
   </div>
 </section>
 
+                        <!------------- SERVICES -------------->
+<section class="services">
+  <div class="container">
+    <h1>My Services</h1>
+    <div class="services-list">
+      <div>
+        <i class="fa-sharp fa-solid fa-code"></i>
+        <h2>Service 1</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis vel cumque voluptatem quisquam vero voluptatum doloremque.</p>
+        <a href="#">Learn more</a>
+      </div>
+      <div>
+        <i class="fa-sharp fa-solid fa-crop-simple"></i>
+        <h2>Service 2</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis vel cumque voluptatem quisquam vero voluptatum doloremque.</p>
+        <a href="#">Learn more</a>
+      </div>
+      <div>
+        <i class="fa-brands fa-app-store"></i>
+        <h2>Service 3</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis vel cumque voluptatem quisquam vero voluptatum doloremque.</p>
+        <a href="#">Learn more</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+                        <!------------- PORTFOLIO -------------->
+<section class="portfolio">
+  <div class="container">
+    <h1>My Work</h1>
+    <div class="work-list">
+      <div class="work">
+        <picture>
+            <source loading="lazy" srcset="build/img/work-10.webp" type="image/webp">
+            <img loading="lazy" src="src/img/work-10.jpg" alt="Work Image">
+        </picture>
+        <div class="layer">
+          <h3>Social Media App</h3>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab voluptatibus placeat molestias maxime, beatae saepe.</p>
+          <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        </div>
+      </div>
+      <div class="work">
+        <picture>
+            <source loading="lazy" srcset="build/img/work-3.webp" type="image/webp">
+            <img loading="lazy" src="src/img/work-3.jpg" alt="Work Image">
+        </picture>
+        <div class="layer">
+          <h3>Music App</h3>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab voluptatibus placeat molestias maxime, beatae saepe.</p>
+          <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        </div>
+      </div>
+      <div class="work">
+        <picture>
+            <source loading="lazy" srcset="build/img/work-8.webp" type="image/webp">
+            <img loading="lazy" src="src/img/work-8.png" alt="Work Image">
+        </picture>
+        <div class="layer">
+          <h3>Online Shopping App</h3>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab voluptatibus placeat molestias maxime, beatae saepe.</p>
+          <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        </div>
+      </div>
+    </div>
+    <a href="#" class="btn">See more</a>
+  </div>
+</section>
+
+                        <!------------- CONTACT -------------->
+<section class="contact">
+  <div class="container">
+    <div class="row">
+      <div class="contact-left">
+        <h1 class="sub-title">Contact Me</h1>
+        <p>dcampos0495@gmail.com</p>
+        <p>+52 01 312 109 6301</p>
+        <div class="social-icons">
+          <a href=""></a>
+        </div>
+      </div>
+      <div class="contact-right">
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+
 <p>holaaaaaaaaaaaa</p>
 <script src="build/js/bundle.min.js"></script>
+
 
 </body>
 </html>

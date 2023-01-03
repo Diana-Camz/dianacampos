@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
   eventListenerEx();
   eventListenerEd();
 });
+
 //----------------------EVENTS LISTENERS---------------------------
 function eventListenerSk() {
   const tabLinks = document.querySelector('.skills');
@@ -89,5 +90,5 @@ function aboutDetailsEd() {
   };
 };
 
-  
+
  
