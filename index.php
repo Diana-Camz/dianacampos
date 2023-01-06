@@ -161,28 +161,42 @@
 
                         <!------------- CONTACT -------------->
 <section class="contact">
+
   <div class="container">
+  <h1>Contact Me</h1>
     <div class="row">
       <div class="contact-left">
-        <h1 class="sub-title">Contact Me</h1>
-        <p>dcampos0495@gmail.com</p>
-        <p>+52 01 312 109 6301</p>
+        <p><i class="fa-solid fa-envelope"></i>dcampos0495@gmail.com</p>
+        <p><i class="fa-solid fa-square-phone"></i>+52 1 312 109 6301</p>
         <div class="social-icons">
-          <a href=""></a>
+          <a href="https://www.facebook.com/dianacamza/"><i class="fa-brands fa-facebook"></i></a>
+          <a href="https://www.linkedin.com/in/diana-campos-zamora-a43a6b159/"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="https://github.com/Diana-Camz"><i class="fa-brands fa-github"></i></i></a>
+          <a href="https://www.instagram.com/diana_camz/"><i class="fa-brands fa-instagram"></i></a>
         </div>
+        <a href="src/img/my-cv-diana-campos.pdf" download class="btn btn2">Download CV</a>
       </div>
       <div class="contact-right">
-        
+        <form action="">
+          <input type="text" name="name" placeholder="Your Name" required>
+          <input type="email" name="email" placeholder="Your Email" required>
+          <textarea name="message" rows="6" placeholder="Your Message"></textarea>
+          <button type="submit" class="btn btn2">Send Message</button>
+        </form>
       </div>
     </div>
   </div>
 </section>
 
+                        <!------------- FOOTER -------------->
+<footer>
+  <div class="copyright">
+    <p>Copyright ©Diana Made with<i class="fa-regular fa-heart"></i>by Easy Tutorials</p>
+  </div>
+</footer>
 
-<p>holaaaaaaaaaaaa</p>
+
 <script src="build/js/bundle.min.js"></script>
-
-
 </body>
 </html>
 
