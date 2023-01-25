@@ -11,13 +11,21 @@
 .row{
   display: grid;
   grid-template-columns: 1fr 2fr;
+
+  @include m.mobile{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .contact-left{
-  //flex-basis: 35%;
-
+  @include m.mobile{
+    width: 95%;
+    border: solid 1px white;
+  }
   p{
-    margin-top: 3rem;
+    margin-top: 2rem;
     font-size: 1.5rem;
 
     i{
@@ -48,11 +56,18 @@
   .btn2{
     display: inline-block;
     background-color: v.$red;
+    @include m.mobile{
+      display: flex;
+    }
   }
 }
 
 .contact-right{
   //flex-basis: 60%;
+  @include m.mobile{
+    width: 95%;
+    border: solid 1px yellow;
+  }
 
   form{
     width: 100%;
@@ -76,5 +91,8 @@
     padding: 1.4rem 6rem;
     margin-top: 2rem;
     cursor: pointer;
+    @include m.mobile{
+      display: flex;
+    }
   }
 }

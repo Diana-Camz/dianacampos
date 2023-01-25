@@ -2,94 +2,178 @@
 @use 'base/mixins' as m;
 
 .about{
-  padding: 8rem 0;
+  padding: 9rem 0 3rem 0;
   color: v.$gray;
+  @include m.mobile{
+    border: solid 2px green;
+  }
 }
 
 .row{
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  @include m.mobile{
+    border: solid 2px red;
+  }
 
   .about-col-1{
     flex-basis: 35%;
+    @include m.mobile{
+      border: solid 1px blue;
+    }
+
+    picture{
+      display: flex;
+      justify-content: center;
+    }
+   
 
     img{
       width: 85%;
       border-radius: 1.5rem;
+      @include m.mobile{
+        width: 50%;
+        border: solid 1px yellow;
+        
+        
+      }
     }
   }
 
   .about-col-2{
     flex-basis: 60%;
+    border: solid 1px blue;
+    @include m.mobile{
+      border: solid 1px blue;
+    }
 
     h1{
       font-size: 5rem;
       font-weight: v.$bold;
       color: v.$white;
       margin-bottom: 1.2rem;
+      text-align: center;
+      @include m.mobile{
+        font-size: 3rem;
+      }
+      @include m.tablet{
+        font-size: 4rem;
+        margin-top: -3rem;
+      }
     }
 
-    p{
+    .about-text{
       font-size: 1.4rem;
       text-align: justify;
+      @include m.mobile{
+        font-size: 1.3rem;
+        padding: 0 6%;;
+      }
     }
 
     .tab-titles{
       display: flex;
       margin: 2rem 0 2.5rem;
+        p:last-of-type{
+          margin-right: 0;
+        }
+      
+      p{
+        font-size: 1.6rem;
+        font-weight: v.$bold;
+      }
+      @include m.mobile{
+        justify-content: space-around;
+        margin-bottom: 1.5rem;
+        padding: 1rem 0;
+        //border: solid 1px yellow;
+      }
+
+      .active-link{
+        @include m.mobile{
+          //color: v.$red;
+          font-size: 1.6rem;
+        }
+      }
+
+      .tab-links{
+        margin-right: 5rem;
+        cursor: pointer;
+        position: relative;
+        @include m.mobile{
+          margin-right: 0;
+        }
+      }
+
+      .tab-links::after{
+        content: '';
+        width: 0%;
+        height: 0.3rem;
+        background-color: v.$red;
+        position: absolute;
+        left: 0;
+        bottom: -0.8rem;
+        transition: 0.5s;
+        @include m.mobile{
+          transition: 0.3s;
+        }
+      }
+
+      .tab-links:hover::after{
+        width: 50%;
+        @include m.mobile{
+          width: 0%;
+        }
+      }
     }
 
-    .tab-links{
-      margin-right: 5rem;
-      font-size: 1.8rem;
-      font-weight: v.$regular;
-      cursor: pointer;
-      position: relative;
-    }
-
-    
-
-
-  }
-
-  .tab-links::after{
-    content: '';
-    width: 0%;
-    height: 0.3rem;
-    background-color: v.$red;
-    position: absolute;
-    left: 0;
-    bottom: -0.8rem;
-    transition: 0.5s;
-  }
-
-  .tab-links:hover::after{
-    width: 50%;
-  }
-
-  .tab-links.active-link::after{
-    width: 50%;
-  }
-
-  .tab-contents ul li{
-    list-style: none;
-    margin: 1rem 0;
-    font-size: 1.6rem;
-
-    span{
-      color: v.$red2;
-      font-size: 1.4rem;
-      font-weight: v.$bold;
+    .tab-links.active-link::after{
+      width: 50%;
+      @include m.mobile{
+        width: 100%;
+        
+      }
     }
   }
+
+    .tab-contents ul li{
+      list-style: none;
+      margin: 1rem 0;
+      font-size: 1.6rem;
+      
+      @include m.mobile{
+        font-size: 1.3rem;
+      }
+
+      span{
+        color: v.$red2;
+        font-size: 1.4rem;
+        font-weight: v.$bold;
+        @include m.mobile{
+          font-size: 1.1rem;
+        }
+      }
+    }
   
-  .tab-contents{
-    display: none;
+    .tab-contents{
+      position: absolute;
+      visibility: hidden;
+      opacity: 0;
+      transition: visibility 0.3s, opacity 0.7s;
+      border: solid 1px red;
+      @include m.mobile{
+        text-align: center;
+        width: 20rem;
+        left: 25%;
+        right: 25%;
+        
+      }
+    }
+
+    .active-tab{
+     visibility: visible;
+     opacity: 1;
+    
+     
+    }
   }
 
-  .tab-contents.active-tab{
-    display: block;
-  }
-}
 

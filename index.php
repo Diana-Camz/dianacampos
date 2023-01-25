@@ -16,14 +16,17 @@
 <body>
 
 <header id="header">
-  <div class="container">
-    <nav>
+  <div class="header-nav">
       <a href="/" class="image-logo-name">  <!--LOGO IMAGE NAME-->
         <picture>
           <source loading="lazy" srcset="build/img/image-logo.webp" type="image/webp">
           <img loading="lazy" src="src/img/image-logo.jpg" alt="Logo Image">
         </picture>
       </a>
+      <div class="mobile-menu">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+      <nav class="nav">
       <ul>
         <li><a href="#">Home</a></li>
         <li><a href="#">About</a></li>
@@ -31,18 +34,20 @@
         <li><a href="#">Portfolio</a></li>
         <li><a href="#">Contact</a></li>
       </ul>      
-    </nav>    
-    <div class="header-text">
-      <p>Front-End Developer Student</p>
-      <h1>Hi, I'm <span>Diana</span><br>Campos From Mexico</h1>
+    </nav>
+  </div>
+  <div class="header-container">
+      <div class="header-text">
+        <p>Front-End Developer Student</p>
+        <h1>Hi, I'm <span>Diana</span>Campos From Mexico</h1>
+      </div>
+      <div class="header-image">  <!--IMAGE BACKGROUND-->      
+          <picture>
+            <source loading="lazy" srcset="build/img/image-background.webp" type="image/webp">
+            <img loading="lazy" src="src/img/image-background.png" alt="Background Image">
+          </picture>
+      </div>
     </div>
-  </div>
-  <div class="image">  <!--IMAGE NAME BACKGROUND-->      
-      <picture>
-        <source loading="lazy" srcset="build/img/image-background.webp" type="image/webp">
-        <img loading="lazy" src="src/img/image-background.png" alt="Background Image">
-      </picture>
-  </div>
 </header>
 
                         <!------------- ABOUT -------------->
@@ -57,7 +62,7 @@
       </div>
       <div class="about-col-2">
         <h1>About me</h1>
-        <p>I am a Psychologist looking for the job of my dreams, which allows me to set new goals, feel new motivations within a challenging environment that challenges my knowledge and skills. All within the endless learning that the IT area provides. I enjoy well-structured code and am passionate about knowing that it can always improve. I am currently a Web Development student on my own, and if I am not practicing you can find me exercising or enjoying the afternoon with my boyfriend or my cats.</p>
+        <p class="about-text">I am a Psychologist looking for the job of my dreams, which allows me to set new goals, feel new motivations within a challenging environment that challenges my knowledge and skills. I enjoy well-structured code and am passionate about knowing that it can always improve. I am currently a Web Development student on my own, and if I am not practicing you can find me exercising or enjoying the afternoon with my boyfriend or my cats.</p>
         <div class="tab-titles">
           <p class="tab-links skills">Skills</p>
           <p class="tab-links experience">Experience</p>

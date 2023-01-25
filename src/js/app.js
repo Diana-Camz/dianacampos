@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
   eventListenerSk();
   eventListenerEx();
   eventListenerEd();
+  eventListenerMobile();
 });
 
 //----------------------EVENTS LISTENERS---------------------------
@@ -18,6 +19,11 @@ function eventListenerEx() {
 function eventListenerEd() {
   const tabLinks = document.querySelector('.education');
     tabLinks.addEventListener('click', aboutDetailsEd);    
+}
+
+function eventListenerMobile() {
+  const mobileMenu = document.querySelector('.mobile-menu');
+    mobileMenu.addEventListener('click', mobileMenu2);    
 }
 
 //----------------------EVENTS FROM SKILLS---------------------------
@@ -89,6 +95,12 @@ function aboutDetailsEd() {
     activeContEx.classList.remove('active-tab');
   };
 };
+//----------------------EVENTS FROM MOBILE MENU---------------------------
+function mobileMenu2(){
+  const activeMobile = document.querySelector('.nav');
 
+  activeMobile.classList.toggle('active-mobile');
+  
+}
 
  
