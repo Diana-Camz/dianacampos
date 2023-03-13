@@ -2,8 +2,18 @@
 @use 'base/mixins' as m;
 
 /* NAVIGATION */
+
+.header{
+  position: sticky;
+  top: 0;
+  z-index: 3;
+  //border: solid 1px green;
+}
+
+
 .container {
   padding: 3rem 6%;
+  z-index: 2;
   @include m.mobile{
     padding: 3rem 4%;
   }
@@ -15,18 +25,27 @@
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
-    padding: 3rem 6%;
+    padding: 0.8rem 6%;
+    border-radius: 0 0 1.3rem 1.3rem;
+    background-color: v.$black1;
+    box-shadow: 0rem 0.5rem 1.5rem v.$gray2;
+    border: solid 1px v.$gray2;
 
     @include m.tablet{
       flex-direction: column;
       justify-content: center;
       padding: 2rem 4%;
-      border: solid 3px blue;
+      //border: solid 1px blue;
     }
     @include m.mobile{
       flex-direction: column;
-      padding: 3rem 4%;
-      border: solid 3px blue;
+      padding: 1.5rem 4%;
+      border-radius: 0;
+      border: solid 1px blue;
+    }
+
+    .header-nav::after{
+      background-color: v.$black1;
     }
 
     .nav{
@@ -52,10 +71,16 @@
     }
 
     .image-logo-name { /* IMAGE LOGO NAME */
-      width: 20rem;     
       img{
+        background-color: v.$black1;
+        width: 20rem;     
+        @include m.tablet{
+          width: 15rem;
+          align-items: center;
+          border: solid 1px v.$white;
+        }
         @include m.mobile{
-          width: 20rem;
+          width: 13rem;
           border: solid 1px v.$white;
         }
       }
@@ -67,7 +92,7 @@
       visibility: hidden;
       @include m.mobile{
         visibility: visible;
-        font-size: 5rem;
+        font-size: 2.8rem;
       }
     } 
   }

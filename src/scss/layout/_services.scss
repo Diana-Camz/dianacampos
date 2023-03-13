@@ -3,10 +3,12 @@
 
 .services{
   padding: 3rem 6%;
-  border: solid 1px red;
 
   h1{
     font-size: 5rem;
+    @include m.tablet{
+      margin-top: 10rem;
+    }
     @include m.mobile{
       margin-top: 10rem;
     }
@@ -15,12 +17,11 @@
 
 .services-list{
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 4rem;
   margin-top: 5rem;
-
+  transition: 0.5s;
   div:hover{
-    background-color: v.$red;
     transform: translateY(-1rem);
     @include m.mobile{
       transform: translateY(-0.5rem);
@@ -30,17 +31,17 @@
   div{
     background-color: v.$gray2;
     padding: 4rem;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     font-weight: v.$delgada;
     border-radius: 1rem;
     transition: background 0.5s, transform 0.5s;
+
     @include m.mobile{
       border: solid 1px yellow;
       font-size: 1.3rem;
       padding: 1.5rem;
       transition: background 0.4s, transform 0.3s;
-    }
-    
+    }    
 
     h2{
       font-size: 3rem;
@@ -53,7 +54,7 @@
       }
     }
 
-    i{
+    .icon{
       font-size: 5rem;
       margin-bottom: 3rem;
       @include m.mobile{
@@ -65,23 +66,119 @@
     }
 
     p{
+      //display: none;
+      opacity: 0;
+      transition: 0.5s;
       @include m.mobile{
         margin-top: 2rem;
       }
     }
 
     a{
-      color: v.$white;
-      font-size: 1.2rem;
-      margin-top: 2rem;
-      display: inline-block;
+      display: none;
       @include m.mobile{
+        color: v.$white;
+        font-size: 1.2rem;
+        margin-top: 2rem;
         display: block;
         text-align: end;
         border: solid 1px red;
       }
     }
+
+    .icon2{
+      visibility: hidden;
+      opacity: 0;
+      font-size: 6rem;
+      padding: 1rem;
+      margin: 1rem;
+      color: v.$red;
+    }
+  }
+}
+
+@include m.desktop{
+  :where(.services-list__front, .services-list__back, .services-list__prep) {
+    height: 35rem;
+    transition: 300ms;
   }
 
+//  FRONTEND
+  .services-list.active-front{
+    grid-template-columns: 2fr 0.5fr 0.5fr;
+    gap: 1rem;
     
+
+    .services-list__front{
+      p, .icon2{
+        opacity: 1;
+        visibility: visible;
+        transition: visibility 1s, opacity 2s;
+        b{
+          font-weight: 600;
+        }
+      }
+    }
+
+    .services-list__back, .services-list__prep{
+      h2{
+        font-size: 1.5rem;
+      }
+      p{
+        display: none;
+      }
+    }
+  }
+
+  //  BACKEND
+  .services-list.active-back{
+    grid-template-columns: 0.5fr 2fr 0.5fr;
+    gap: 1rem;
+
+    .services-list__back{
+      p, .icon2{
+        opacity: 1;
+        visibility: visible;
+        transition: visibility 1s, opacity 2s;
+        b{
+          font-weight: 600;
+        }
+      }
+    }
+
+    .services-list__front, .services-list__prep{
+      h2{
+        font-size: 1.5rem;
+      }
+      p{
+        display: none;
+      }
+    }
+  }
+
+  //  PREPROCESSORS AND TOOLS
+  .services-list.active-prep{
+    grid-template-columns: 0.5fr 0.5fr 2fr;
+    gap: 1rem;
+
+    .services-list__prep{
+      p, .icon2{
+        opacity: 1;
+        visibility: visible;
+        transition: visibility 1s, opacity 2s;
+      b{
+        font-weight: 600;
+      }
+      }
+    }
+
+    .services-list__front, .services-list__back{
+      h2{
+        font-size: 1.5rem;
+      }
+      p{
+        display: none;
+      }
+    }
+  }
 }

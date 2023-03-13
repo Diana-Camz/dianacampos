@@ -7,6 +7,7 @@ html {
   font-size: 62.5%;
   box-sizing: border-box;
   background: v.$black1; 
+  scroll-behavior: smooth;
 }
 
 *{
@@ -21,6 +22,7 @@ font-family: v.$principal_font;
 
 body {
   color: v.$white;
+  
 }
 
 
