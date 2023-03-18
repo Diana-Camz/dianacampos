@@ -15,77 +15,77 @@
 </head>
 <body>
 
-<header class="header">
-  <div class="header-nav">
-      <a href="/" class="image-logo-name">  <!--LOGO IMAGE NAME-->
+<header class="header-sticky">
+  <div class="header">
+      <a href="/">  <!--LOGO IMAGE NAME-->
         <picture>
           <source loading="lazy" srcset="build/img/image-logo.webp" type="image/webp">
-          <img loading="lazy" src="src/img/image-logo.jpg" alt="Logo Image">
+          <img class="header__img" loading="lazy" src="src/img/image-logo.jpg" alt="Logo Image">
         </picture>
       </a>
-      <div class="mobile-menu">
+      <div class="header-icon">
         <i class="fa-solid fa-bars"></i>
       </div>
-      <nav class="nav">
+      <nav class="header-nav">
       <ul>
-        <li><a href="#header">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#portfolio">Portfolio</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li class="header-nav__li"><a class="header-nav__a" href="#main">Home</a></li>
+        <li class="header-nav__li"><a class="header-nav__a" href="#about">About</a></li>
+        <li class="header-nav__li"><a class="header-nav__a" href="#services">Services</a></li>
+        <li class="header-nav__li"><a class="header-nav__a" href="#portfolio">Portfolio</a></li>
+        <li class="header-nav__li"><a class="header-nav__a" href="#contact">Contact</a></li>
       </ul>      
     </nav>
   </div>
 </header>
-  <div id="header" class="header-container">
-    <div class="header-text">
+<main id="main">
+  <div class="main">
+    <div class="main-text">
       <p>FrontEnd Developer Student</p>
-      <h1>Hi, I'm <span>Diana</span>Campos From Mexico</h1>
+      <h1 class="main-text__h1">Hi, I'm <span class="main-text__span">Diana</span>Campos From Mexico</h1>
     </div>
-    <div class="header-image">  <!--IMAGE BACKGROUND-->      
+    <div>  <!--IMAGE BACKGROUND-->      
         <picture>
           <source loading="lazy" srcset="build/img/image-background.webp" type="image/webp">
-          <img loading="lazy" src="src/img/image-background.png" alt="Background Image">
+          <img class="main-image" loading="lazy" src="src/img/image-background.png" alt="Background Image">
         </picture>
     </div>
   </div>
-
+</main>
                         <!------------- ABOUT -------------->
 <section id="about" class="about">
   <div class="container">
-    <div class="row">
+    <div class="about-row">
       <div class="about-col-1">
-        <picture>
+        <picture class="about-col-1__picture">
           <source loading="lazy" srcset="build/img/user.webp" type="image/webp">
-          <img loading="lazy" src="src/img/user.jpg" alt="User Image">
+          <img class="about-col-1__img" loading="lazy" src="src/img/user.jpg" alt="User Image">
         </picture>
       </div>
       <div class="about-col-2">
-        <h1>About me</h1>
-        <p class="about-text">I am a Psychologist looking for the job of my dreams, which allows me to set new goals, feel new motivations within a challenging environment that challenges my knowledge and skills. I enjoy well-structured code and am passionate about knowing that it can always improve.</p><br>
-        <p class="about-text">I am currently a Web Development student on my own, and if I am not practicing you can find me exercising or enjoying the afternoon with my boyfriend or my cats.</p>
-        <div class="tab-titles">
-          <p class="tab-links skills">Skills</p>
-          <p class="tab-links experience">Experience</p>
-          <p class="tab-links education">Education</p>
+        <h1  class="about-col-2__h1">About me</h1>
+        <p class="about-col-2__p">I am a Psychologist looking for the job of my dreams, which allows me to set new goals, feel new motivations within a challenging environment that challenges my knowledge and skills. I enjoy well-structured code and am passionate about knowing that it can always improve.</p><br>
+        <p class="about-col-2__p">I am currently a Web Development student on my own, and if I am not practicing you can find me exercising or enjoying the afternoon with my boyfriend or my cats.</p>
+        <div class="about-titles">
+          <p class="about-titles__link about-titles__link--skills">Skills</p>
+          <p class="about-titles__link about-titles__link--experience">Experience</p>
+          <p class="about-titles__link about-titles__link--education">Education</p>
         </div>
-        <div class="tab-contents skillsCont">
+        <div class="about-content about-content--skills">
           <ul>
-            <li><span>Organizational capacity:</span><br>Anticipation, planning, adaptation and time management to fulfill the requested tasks.</li>
-            <li><span>​Communication Skills:</span><br>listening and communication skills, managing to communicate my ideas, opinions and intentions in a clear, assertive and open to debate manner.</li>
-            <li><span>​Flexibility:</span><br>I have managed to adapt to the different activities that the position where I have worked has required.</li>
+            <li class="about-content__li"><span class="about-content__li--span">Organizational capacity:</span><br>Anticipation, planning, adaptation and time management to fulfill the requested tasks.</li>
+            <li class="about-content__li"><span class="about-content__li--span">​Communication Skills:</span><br>listening and communication skills, managing to communicate my ideas, opinions and intentions in a clear, assertive and open to debate manner.</li>
+            <li class="about-content__li"><span class="about-content__li--span">​Flexibility:</span><br>I have managed to adapt to the different activities that the position where I have worked has required.</li>
           </ul>
         </div>
-        <div class="tab-contents experienceCont">
+        <div class="about-content about-content--experience">
           <ul>
-            <li><span></span><br>For now I have no experience in any company, all the knowledge that I have acquired and projects that I have carried out are thanks to the learning that I obtained from the internet on my own.</li>
+            <li class="about-content__li"><span></span><br>For now I have no experience in any company, all the knowledge that I have acquired and projects that I have carried out are thanks to the learning that I obtained from the internet on my own.</li>
           </ul>
         </div>
-        <div class="tab-contents educationCont">
+        <div class="about-content about-content--education">
           <ul>
-            <li><span>​Bachelor's Degree</span><br>​Psychology 2013-2018</li>
-            <li><span>Udemy Course</span><br>Complete web course with HTML, CSS, JS AJAX, PHP, and MySQL: Juan Pablo de la Torre. 344/798 classes.</li>
-            <!--<li><span>Education 3</span><br>Insert your education</li>-->
+            <li class="about-content__li"><span class="about-content__li--span">​Bachelor's Degree</span><br>​Psychology 2013-2018</li>
+            <li class="about-content__li"><span class="about-content__li--span">Udemy Course</span><br>Complete web course with HTML, CSS, JS AJAX, PHP, and MySQL: Juan Pablo de la Torre. 344/798 classes.</li>
           </ul>
         </div>
       </div>

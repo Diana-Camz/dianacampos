@@ -9,179 +9,173 @@
   }
 }
 
-.row{
+.about-row{
+  display: grid;
+  grid-template-columns: 1fr 2fr;
   @include m.mobile{
     border: solid 2px red;
   }
+}
+  
 
-  .about-col-1{
-    flex-basis: 35%;
+.about-col-1{
+  flex-basis: 35%;
+  @include m.mobile{
+    border: solid 1px blue;
+  }
+
+  &__picture{
+    display: flex;
+    justify-content: center;
+  }
+  
+
+  &__img{
+    width: 85%;
+    border-radius: 1.5rem;
     @include m.mobile{
-      border: solid 1px blue;
+      width: 50%;
+      border: solid 1px yellow;
+      
+      
     }
+  }
+}
 
-    picture{
-      display: flex;
-      justify-content: center;
+.about-col-2{
+  @include m.mobile{
+    border: solid 1px blue;
+  }
+
+  &__h1{
+    font-size: 5rem;
+    font-weight: v.$bold;
+    color: v.$white;
+    margin:0.9rem 0 1.2rem;
+    padding-right: 20%;
+    text-align: center;
+    @include m.mobile{
+      font-size: 3rem;
+      padding: 0;
     }
-   
-
-    img{
-      width: 85%;
-      border-radius: 1.5rem;
-      @include m.mobile{
-        width: 50%;
-        border: solid 1px yellow;
-        
-        
-      }
+    @include m.tablet{
+      font-size: 4rem;
     }
   }
 
-  .about-col-2{
+  &__p{
+    font-size: 1.4rem;
+    text-align: justify;
+    text-indent: 1rem;
+    padding-right: 20%;
+    @include m.tablet{
+      padding-right: 0;
+    }
     @include m.mobile{
-      border: solid 1px blue;
+      font-size: 1.5rem;
+      padding: 0 6%;
+    }
+  }
+
+  .about-titles{
+    display: flex;
+    margin: 2rem 0 2.5rem;
+      &__link:last-of-type{
+        margin-right: 0;
+      }
+    @include m.mobile{
+      justify-content: space-around;
+      margin-bottom: 1.5rem;
+      padding: 1rem 0;
     }
 
-    h1{
-      font-size: 5rem;
-      font-weight: v.$bold;
-      color: v.$white;
-      margin:0.9rem 0 1.2rem;
-      padding-right: 20%;
-      text-align: center;
+    .active-link{
       @include m.mobile{
-        font-size: 3rem;
-        padding: 0;
-      }
-      @include m.tablet{
-        font-size: 4rem;
-      }
-    }
-
-    .about-text{
-      font-size: 1.4rem;
-      text-align: justify;
-      text-indent: 1rem;
-      padding-right: 20%;
-      @include m.tablet{
-        padding-right: 0;
-      }
-      @include m.mobile{
-        font-size: 1.5rem;
-        padding: 0 6%;
-      }
-    }
-
-    .tab-titles{
-      display: flex;
-      margin: 2rem 0 2.5rem;
-        p:last-of-type{
-          margin-right: 0;
-        }
-      
-      p{
+        //color: v.$red;
         font-size: 1.6rem;
-        font-weight: v.$bold;
-      }
-      @include m.mobile{
-        justify-content: space-around;
-        margin-bottom: 1.5rem;
-        padding: 1rem 0;
-      }
-
-      .active-link{
-        @include m.mobile{
-          //color: v.$red;
-          font-size: 1.6rem;
-        }
-      }
-
-      .tab-links{
-        margin-right: 5rem;
-        cursor: pointer;
-        position: relative;
-        @include m.mobile{
-          margin-right: 0;
-        }
-      }
-
-      .tab-links::after{
-        content: '';
-        width: 0%;
-        height: 0.3rem;
-        background-color: v.$red;
-        position: absolute;
-        left: 0;
-        bottom: -0.8rem;
-        transition: 0.5s;
-        @include m.mobile{
-          transition: 0.3s;
-        }
-      }
-
-      .tab-links:hover::after{
-        width: 50%;
-        @include m.mobile{
-          width: 0%;
-        }
       }
     }
 
-    .tab-links.active-link::after{
+    &__link{
+      font-size: 1.8rem;
+      font-weight: v.$bold;
+      margin-right: 5rem;
+      cursor: pointer;
+      position: relative;
+      @include m.mobile{
+        margin-right: 0;
+      }
+    }
+
+    &__link::after{
+      content: '';
+      width: 0%;
+      height: 0.3rem;
+      background-color: v.$red;
+      position: absolute;
+      left: 0;
+      bottom: -0.8rem;
+      transition: 0.5s;
+      @include m.mobile{
+        transition: 0.3s;
+      }
+    }
+
+    &__link:hover::after{
       width: 50%;
       @include m.mobile{
-        width: 100%;
-        
+        width: 0%;
       }
     }
   }
 
-    .tab-contents ul li{
-      list-style: none;
-      margin: 1rem 0;
-      font-size: 1.2rem;
+  .about-titles__link--active::after{
+    width: 50%;
+    @include m.mobile{
+      width: 100%;
       
-      @include m.mobile{
-        font-size: 1.3rem;
-      }
-
-      span{
-        color: v.$red2;
-        font-size: 1.2rem;
-        font-weight: v.$bold;
-        @include m.mobile{
-          font-size: 1.1rem;
-        }
-      }
+    }
+  }
+}
+ 
+.about-content{
+  padding-right: 20%;
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.3s, opacity 0.7s;
+  @include m.tablet{
+    padding-right: 8%;
+  }
+  @include m.mobile{
+    padding-right: 0%;
+    text-align: center;
+    width: 70%;
+    left: auto;
+    right: auto;
+    
+  }
+  .about-content__li{
+    list-style: none;
+    margin: 1rem 0;
+    font-size: 1.5rem;
+    
+    @include m.mobile{
+      font-size: 1.2rem;
     }
   
-    .tab-contents{
-      padding-right: 20%;
-      position: absolute;
-      visibility: hidden;
-      opacity: 0;
-      transition: visibility 0.3s, opacity 0.7s;
-      @include m.tablet{
-        padding-right: 8%;
-      }
+    &--span{
+      color: v.$red2;
+      font-size: 1.7rem;
+      font-weight: v.$bold;
       @include m.mobile{
-        padding-right: 0%;
-        text-align: center;
-        width: 70%;
-        left: auto;
-        right: auto;
-        
+        font-size: 1.1rem;
       }
-    }
-
-    .active-tab{
-     visibility: visible;
-     opacity: 1;
-    
-     
     }
   }
+}
 
-
-
+.about-content--active{
+  visibility: visible;
+  opacity: 1;
+}

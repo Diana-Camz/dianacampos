@@ -11,17 +11,17 @@ document.addEventListener('DOMContentLoaded', function() {
 //----------------------EVENTS LISTENERS---------------------------
 //  ABOUT
 function eventListenerSk() {
-  const tabLinks = document.querySelector('.skills');
+  const tabLinks = document.querySelector('.about-titles__link--skills');
     tabLinks.addEventListener('click', aboutDetailsSk);    
 }
 
 function eventListenerEx() {
-  const tabLinks = document.querySelector('.experience');
+  const tabLinks = document.querySelector('.about-titles__link--experience');
     tabLinks.addEventListener('click', aboutDetailsEx);    
 }
 
 function eventListenerEd() {
-  const tabLinks = document.querySelector('.education');
+  const tabLinks = document.querySelector('.about-titles__link--education');
     tabLinks.addEventListener('click', aboutDetailsEd);    
 }
 
@@ -43,64 +43,64 @@ function eventListenerPrep() {
 
 //  MOBILE
 function eventListenerMobile() {
-  const mobileMenu = document.querySelector('.mobile-menu');
+  const mobileMenu = document.querySelector('.header-icon');
     mobileMenu.addEventListener('click', mobileMenu2);    
 }
 //----------------------VARIABLES---------------------------
-const activeLinkSk = document.querySelector('.skills');
-const activeContSk = document.querySelector('.skillsCont');
+const activeLinkSk = document.querySelector('.about-titles__link--skills');
+const activeContSk = document.querySelector('.about-content--skills');
 
-const activeLinkEx = document.querySelector('.experience');
-const activeContEx = document.querySelector('.experienceCont');
+const activeLinkEx = document.querySelector('.about-titles__link--experience');
+const activeContEx = document.querySelector('.about-content--experience');
 
-const activeLinkEd = document.querySelector('.education');
-const activeContEd = document.querySelector('.educationCont');
+const activeLinkEd = document.querySelector('.about-titles__link--education');
+const activeContEd = document.querySelector('.about-content--education');
 
 const activeServices = document.querySelector('.services-list');
 
 //----------------------EVENTS FROM ABOUT---------------------------
 //SKILLS:
 function aboutDetailsSk() {
-  activeLinkSk.classList.toggle('active-link');
-  activeContSk.classList.toggle('active-tab');
+  activeLinkSk.classList.toggle('about-titles__link--active');
+  activeContSk.classList.toggle('about-content--active');
   
-  if(activeLinkEx.classList.contains('active-link') || activeLinkEd.classList.contains('active-link')) {
-    activeLinkEx.classList.remove('active-link');
-    activeLinkEd.classList.remove('active-link');
+  if(activeLinkEx.classList.contains('about-titles__link--active') || activeLinkEd.classList.contains('about-titles__link--active')) {
+    activeLinkEx.classList.remove('about-titles__link--active');
+    activeLinkEd.classList.remove('about-titles__link--active');
   };
-  if(activeContEx.classList.contains('active-tab') || activeContEd.classList.contains('active-tab')) {
-    activeContEx.classList.remove('active-tab');
-    activeContEd.classList.remove('active-tab');
+  if(activeContEx.classList.contains('about-content--active') || activeContEd.classList.contains('about-content--active')) {
+    activeContEx.classList.remove('about-content--active');
+    activeContEd.classList.remove('about-content--active');
   };
 };
 //EXPERIENCE:
 function aboutDetailsEx() {
 
-  activeLinkEx.classList.toggle('active-link');
-  activeContEx.classList.toggle('active-tab');
+  activeLinkEx.classList.toggle('about-titles__link--active');
+  activeContEx.classList.toggle('about-content--active');
   
-  if(activeLinkSk.classList.contains('active-link') || activeLinkEd.classList.contains('active-link')) {
-    activeLinkSk.classList.remove('active-link');
-    activeLinkEd.classList.remove('active-link');
+  if(activeLinkSk.classList.contains('about-titles__link--active') || activeLinkEd.classList.contains('about-titles__link--active')) {
+    activeLinkSk.classList.remove('about-titles__link--active');
+    activeLinkEd.classList.remove('about-titles__link--active');
   };
-  if(activeContSk.classList.contains('active-tab') || activeContEd.classList.contains('active-tab')) {
-    activeContSk.classList.remove('active-tab');
-    activeContEd.classList.remove('active-tab');
+  if(activeContSk.classList.contains('about-content--active') || activeContEd.classList.contains('about-content--active')) {
+    activeContSk.classList.remove('about-content--active');
+    activeContEd.classList.remove('about-content--active');
   };
 };
 //EDUCATION:
 function aboutDetailsEd() {
 
-  activeLinkEd.classList.toggle('active-link');
-  activeContEd.classList.toggle('active-tab');
+  activeLinkEd.classList.toggle('about-titles__link--active');
+  activeContEd.classList.toggle('about-content--active');
   
-  if(activeLinkSk.classList.contains('active-link') || activeLinkEx.classList.contains('active-link')) {
-    activeLinkSk.classList.remove('active-link');
-    activeLinkEx.classList.remove('active-link');
+  if(activeLinkSk.classList.contains('about-titles__link--active') || activeLinkEx.classList.contains('about-titles__link--active')) {
+    activeLinkSk.classList.remove('about-titles__link--active');
+    activeLinkEx.classList.remove('about-titles__link--active');
   };
-  if(activeContSk.classList.contains('active-tab') || activeContEx.classList.contains('active-tab')) {
-    activeContSk.classList.remove('active-tab');
-    activeContEx.classList.remove('active-tab');
+  if(activeContSk.classList.contains('about-content--active') || activeContEx.classList.contains('about-content--active')) {
+    activeContSk.classList.remove('about-content--active');
+    activeContEx.classList.remove('about-content--active');
   };
 };
 //----------------------EVENTS FROM SERVICES---------------------------
@@ -147,7 +147,7 @@ function serviceDetailsPrep() {
 
 //----------------------EVENTS FROM MOBILE MENU---------------------------
 function mobileMenu2(){
-  const activeMobile = document.querySelector('.nav');
+  const activeMobile = document.querySelector('.header-nav');
 
   activeMobile.classList.toggle('active-mobile');
   
@@ -171,3 +171,4 @@ function handleSubmit(e){
 
   console.log(name);
   //window.location.href=`mailto:dcampos0495@gmail.com?subject=${name}%7C%20has%20contacted%20you%20from%20your%20Portolio&body=Name%3A%20${name}%0AEmail%3A%20${email}%0AMessage%3A%20${message}`
+*/
