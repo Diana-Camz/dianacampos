@@ -1,7 +1,7 @@
 @use 'base/variables' as v;
 @use 'base/mixins' as m;
 
-.copyright{
+.footer{
   width: 100%;
   text-align: center;
   padding: 1.5rem 2.5rem;
@@ -10,7 +10,7 @@
   font-weight: v.$delgada;
   margin-top: 2rem;
 
-  i{
+  &__i{
     color: v.$red;
   }
 }

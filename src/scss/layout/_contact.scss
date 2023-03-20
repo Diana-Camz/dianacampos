@@ -1,15 +1,7 @@
 @use 'base/variables' as v;
 @use 'base/mixins' as m;
 
-
 .contact{
-  padding: 3rem 6%;
-  h1{
-    font-size: 5rem;
-  }
-}
-
-.row{
   display: grid;
   grid-template-columns: 1fr 2fr;
 
@@ -20,26 +12,27 @@
   }
 }
 
-.contact-left{
+.contact-info{
   @include m.mobile{
     width: 95%;
     border: solid 1px white;
   }
-  p{
+  &__p{
     margin-top: 2rem;
     font-size: 1.5rem;
 
-    i{
+    &--i{
       color: v.$red;
       margin-right: 1.5rem;
       font-size: 2.5rem;
     }
   }
+  
 
-  .social-icons{
+  .contact-icons{
     margin-top: 3rem;
 
-    a{
+    &__a{
       text-decoration: none;
       font-size: 3rem;
       margin-right: 1.5rem;
@@ -53,27 +46,18 @@
       }
     }
   }
-
-  .btn2{
-    display: inline-block;
-    background-color: v.$red;
-    @include m.mobile{
-      display: flex;
-    }
-  }
 }
 
-.contact-right{
-  //flex-basis: 60%;
+.contact-form{
   @include m.mobile{
     width: 95%;
     border: solid 1px yellow;
   }
 
-  form{
+  .form{
     width: 100%;
 
-    input, textarea{
+    &__input{
       width: 100%;
       border: 0;
       outline: none;
@@ -83,17 +67,6 @@
       color: v.$white;
       font-size: 1.8rem;
       border-radius: 0.6rem;
-    }
-  }
-
-  .btn2{
-    display: inline-block;
-    background-color: v.$red;
-    padding: 1.4rem 6rem;
-    margin-top: 2rem;
-    cursor: pointer;
-    @include m.mobile{
-      display: flex;
     }
   }
 }

@@ -2,40 +2,25 @@
 @use 'base/mixins' as m;
 
 .services{
-  padding: 3rem 6%;
-
-  h1{
-    font-size: 5rem;
-    @include m.tablet{
-      margin-top: 10rem;
-    }
-    @include m.mobile{
-      margin-top: 10rem;
-    }
-  }
-}
-
-.services-list{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 4rem;
   margin-top: 5rem;
   transition: 0.5s;
-  div:hover{
+  .service:hover{
     transform: translateY(-1rem);
     @include m.mobile{
       transform: translateY(-0.5rem);
     }
   }
 
-  div{
+  .service{
     background-color: v.$gray2;
     padding: 4rem;
     font-size: 1.5rem;
     font-weight: v.$delgada;
     border-radius: 1rem;
     transition: background 0.5s, transform 0.5s;
-
     @include m.mobile{
       border: solid 1px yellow;
       font-size: 1.3rem;
@@ -43,7 +28,7 @@
       transition: background 0.4s, transform 0.3s;
     }    
 
-    h2{
+    &__h2{
       font-size: 3rem;
       font-weight: v.$bold;
       margin-bottom: 1.5rem;
@@ -54,7 +39,7 @@
       }
     }
 
-    .icon{
+    &__icon{
       font-size: 5rem;
       margin-bottom: 3rem;
       @include m.mobile{
@@ -65,8 +50,7 @@
       }
     }
 
-    p{
-      //display: none;
+    &__p{
       opacity: 0;
       transition: 0.5s;
       @include m.mobile{
@@ -74,7 +58,7 @@
       }
     }
 
-    a{
+    &__a{
       display: none;
       @include m.mobile{
         color: v.$white;
@@ -86,7 +70,7 @@
       }
     }
 
-    .icon2{
+    &__icon2{
       visibility: hidden;
       opacity: 0;
       font-size: 6rem;
@@ -98,85 +82,85 @@
 }
 
 @include m.desktop{
-  :where(.services-list__front, .services-list__back, .services-list__prep) {
+  :where(.service__front, .service__back, .service__prep) {
     height: 35rem;
     transition: 300ms;
   }
 
 //  FRONTEND
-  .services-list.active-front{
+  .service__front--active{
     grid-template-columns: 2fr 0.5fr 0.5fr;
     gap: 1rem;
     
 
-    .services-list__front{
-      p, .icon2{
+    .service__front{
+      .service__p, .service__icon2{
         opacity: 1;
         visibility: visible;
         transition: visibility 1s, opacity 2s;
-        b{
+        .service__b{
           font-weight: 600;
         }
       }
     }
 
-    .services-list__back, .services-list__prep{
-      h2{
+    .service__back, .service__prep{
+      .service__h2{
         font-size: 1.5rem;
       }
-      p{
+      .service__p{
         display: none;
       }
     }
   }
 
   //  BACKEND
-  .services-list.active-back{
+  .service__back--active{
     grid-template-columns: 0.5fr 2fr 0.5fr;
     gap: 1rem;
 
-    .services-list__back{
-      p, .icon2{
+    .service__back{
+      .service__p, .service__icon2{
         opacity: 1;
         visibility: visible;
         transition: visibility 1s, opacity 2s;
-        b{
+        .service__b{
           font-weight: 600;
         }
       }
     }
 
-    .services-list__front, .services-list__prep{
-      h2{
+    .service__front, .service__prep{
+      .service__h2{
         font-size: 1.5rem;
       }
-      p{
+      .service__p{
         display: none;
       }
     }
   }
 
   //  PREPROCESSORS AND TOOLS
-  .services-list.active-prep{
+  .service__prep--active{
     grid-template-columns: 0.5fr 0.5fr 2fr;
     gap: 1rem;
 
-    .services-list__prep{
-      p, .icon2{
+    .service__prep{
+      .service__p, .service__icon2{
         opacity: 1;
         visibility: visible;
         transition: visibility 1s, opacity 2s;
-      b{
-        font-weight: 600;
-      }
+        .service__b{
+          font-weight: 600;
+        }
       }
     }
 
-    .services-list__front, .services-list__back{
-      h2{
+    .service__front, .service__back{
+      .service__h2{
         font-size: 1.5rem;
       }
-      p{
+      .service__p{
         display: none;
       }
     }

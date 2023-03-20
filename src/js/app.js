@@ -27,17 +27,17 @@ function eventListenerEd() {
 
 //  SERVICES
 function eventListenerFront() {
-  const tabService = document.querySelector('.services-list__front');
+  const tabService = document.querySelector('.service__front');
     tabService.addEventListener('click', serviceDetailsFront);    
 }
 
 function eventListenerBack() {
-  const tabService = document.querySelector('.services-list__back');
+  const tabService = document.querySelector('.service__back');
     tabService.addEventListener('click', serviceDetailsBack);    
 }
 
 function eventListenerPrep() {
-  const tabService = document.querySelector('.services-list__prep');
+  const tabService = document.querySelector('.service__prep');
     tabService.addEventListener('click', serviceDetailsPrep);    
 }
 
@@ -56,7 +56,7 @@ const activeContEx = document.querySelector('.about-content--experience');
 const activeLinkEd = document.querySelector('.about-titles__link--education');
 const activeContEd = document.querySelector('.about-content--education');
 
-const activeServices = document.querySelector('.services-list');
+const activeServices = document.querySelector('.services');
 
 //----------------------EVENTS FROM ABOUT---------------------------
 //SKILLS:
@@ -106,10 +106,10 @@ function aboutDetailsEd() {
 //----------------------EVENTS FROM SERVICES---------------------------
 function serviceDetailsFront() {
 
-  activeServices.classList.toggle('active-front');
+  activeServices.classList.toggle('service__front--active');
   //activeContEd.classList.toggle('active-tab');
-  if(activeServices.classList.contains('active-back') || activeServices.classList.contains('active-prep')){
-    activeServices.classList.remove('active-back') || activeServices.classList.remove('active-prep');
+  if(activeServices.classList.contains('service__back--active') || activeServices.classList.contains('service__prep--active')){
+    activeServices.classList.remove('service__back--active') || activeServices.classList.remove('service__prep--active');
   };
   /*if(activeContSk.classList.contains('active-tab') || activeContEx.classList.contains('active-tab')) {
     activeContSk.classList.remove('active-tab');
@@ -119,11 +119,11 @@ function serviceDetailsFront() {
 
 function serviceDetailsBack() {
 
-  activeServices.classList.toggle('active-back');
+  activeServices.classList.toggle('service__back--active');
   //activeContEd.classList.toggle('active-tab');
   
- if(activeServices.classList.contains('active-front') || activeServices.classList.contains('active-prep')){
-    activeServices.classList.remove('active-front') || activeServices.classList.remove('active-prep');
+ if(activeServices.classList.contains('service__front--active') || activeServices.classList.contains('service__prep--active')){
+    activeServices.classList.remove('service__front--active') || activeServices.classList.remove('service__prep--active');
   };
   /*if(activeContSk.classList.contains('active-tab') || activeContEx.classList.contains('active-tab')) {
     activeContSk.classList.remove('active-tab');
@@ -133,11 +133,11 @@ function serviceDetailsBack() {
 
 function serviceDetailsPrep() {
 
-  activeServices.classList.toggle('active-prep');
+  activeServices.classList.toggle('service__prep--active');
   //activeContEd.classList.toggle('active-tab');
   
-  if(activeServices.classList.contains('active-front') || activeServices.classList.contains('active-back')){
-    activeServices.classList.remove('active-front') || activeServices.classList.remove('active-back');
+  if(activeServices.classList.contains('service__front--active') || activeServices.classList.contains('service__back--active')){
+    activeServices.classList.remove('service__front--active') || activeServices.classList.remove('service__back--active');
   };
   /*if(activeContSk.classList.contains('active-tab') || activeContEx.classList.contains('active-tab')) {
     activeContSk.classList.remove('active-tab');
