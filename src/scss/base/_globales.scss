@@ -9,6 +9,9 @@ html {
   box-sizing: border-box;
   background: v.$black1; 
   scroll-behavior: smooth;
+  @include m.mobile{
+    scroll-padding-top: 4rem;
+  }
 }
 
 *{
@@ -22,8 +25,7 @@ font-family: v.$principal_font;
 }
 
 body {
-  color: v.$white;
-  
+  color: v.$white; 
 }
 
 
@@ -58,19 +60,20 @@ h4 {
 /*---------classes--------*/
 .container {
   padding: 6rem 10%;
-  z-index: 2;
   @include m.mobile{
-    padding: 3rem 4%;
+    padding: 3rem 2%;
   }
   &__h1{
-    font-size: 5rem;
+    font-size: 6rem;
     padding: 2.2rem;
     margin: 2rem;
     @include m.tablet{
       margin-top: 10rem;
     }
     @include m.mobile{
-      margin-top: 10rem;
+      margin-top: 2rem;
+      padding: 0;
+      font-size: 3.5rem;
     }
   }
 }
@@ -97,6 +100,7 @@ h4 {
   background-color: v.$red;
   @include m.mobile{
     display: flex;
+    margin: 3rem auto;
   }
 }
 

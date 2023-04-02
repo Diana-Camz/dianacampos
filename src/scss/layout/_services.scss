@@ -9,23 +9,43 @@
   transition: 0.5s;
   .service:hover{
     transform: translateY(-1rem);
-    @include m.mobile{
-      transform: translateY(-0.5rem);
+    @include m.tablet{
+      transform: none;
     }
+  }
+  @include m.tablet{
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
+  }
+  
+  @include m.mobile{
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows:1fr;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    padding: 0 3rem 0 3rem;
+    scroll-snap-type: x mandatory;
+    overscroll-behavior-x: contain;
   }
 
   .service{
     background-color: v.$gray2;
     padding: 4rem;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: v.$delgada;
     border-radius: 1rem;
-    transition: background 0.5s, transform 0.5s;
+    transition: transform 0.5s;
+    @include m.tablet{
+      padding: 4rem 4rem 0 4rem;
+    }
     @include m.mobile{
-      border: solid 1px yellow;
-      font-size: 1.3rem;
       padding: 1.5rem;
-      transition: background 0.4s, transform 0.3s;
+      margin: 1rem 0;
+      width: 95vw;
+      height: 25rem;
+      scroll-snap-align: center;
+      object-fit: contain;
+      transition: none;
     }    
 
     &__h2{
@@ -35,7 +55,6 @@
       @include m.mobile{
         display: inline;
         font-size: 1.8rem;
-        border: solid 1px green;
       }
     }
 
@@ -45,29 +64,28 @@
       @include m.mobile{
         display: inline;
         margin-right: 0.5rem;
-        font-size: 3rem;
-        border: solid 1px red;
+        font-size: 4rem;
       }
     }
 
     &__p{
+      font-size: 1.6rem;
+      visibility: hidden;
       opacity: 0;
-      transition: 0.5s;
-      @include m.mobile{
+      @include m.tablet{
+        visibility: visible;
+        font-size: 1.6rem;
         margin-top: 2rem;
+        opacity: 1;
+        text-align: justify;
+      }
+      @include m.mobile{
+        font-size: 1.3rem;
       }
     }
 
-    &__a{
-      display: none;
-      @include m.mobile{
-        color: v.$white;
-        font-size: 1.2rem;
-        margin-top: 2rem;
-        display: block;
-        text-align: end;
-        border: solid 1px red;
-      }
+    &__b{
+      font-weight: 600;
     }
 
     &__icon2{
@@ -77,6 +95,14 @@
       padding: 1rem;
       margin: 1rem;
       color: v.$red;
+      @include m.tablet{
+        visibility: visible;
+        opacity: 1;
+      }
+      @include m.mobile{
+        margin: 0.8rem;
+        font-size: 4rem;
+      }
     }
   }
 }
@@ -84,7 +110,7 @@
 @include m.desktop{
   :where(.service__front, .service__back, .service__prep) {
     height: 35rem;
-    transition: 300ms;
+    transition: 10s;
   }
 
 //  FRONTEND
@@ -92,24 +118,20 @@
     grid-template-columns: 2fr 0.5fr 0.5fr;
     gap: 1rem;
     
+    
+    
 
     .service__front{
-      .service__p, .service__icon2{
+      .service__icon2, .service__p{
         opacity: 1;
         visibility: visible;
-        transition: visibility 1s, opacity 2s;
-        .service__b{
-          font-weight: 600;
-        }
+        transition: visibility 1s, opacity 3s;
       }
     }
 
     .service__back, .service__prep{
       .service__h2{
         font-size: 1.5rem;
-      }
-      .service__p{
-        display: none;
       }
     }
   }
@@ -120,22 +142,16 @@
     gap: 1rem;
 
     .service__back{
-      .service__p, .service__icon2{
+      .service__icon2, .service__p{
         opacity: 1;
         visibility: visible;
-        transition: visibility 1s, opacity 2s;
-        .service__b{
-          font-weight: 600;
-        }
+        transition: visibility 1s, opacity 3s;
       }
     }
 
     .service__front, .service__prep{
       .service__h2{
         font-size: 1.5rem;
-      }
-      .service__p{
-        display: none;
       }
     }
   }
@@ -146,13 +162,13 @@
     gap: 1rem;
 
     .service__prep{
-      .service__p, .service__icon2{
+      .service__icon2, .service__p{
         opacity: 1;
         visibility: visible;
-        transition: visibility 1s, opacity 2s;
-        .service__b{
-          font-weight: 600;
-        }
+        transition: visibility 1s, opacity 3s;
+      }
+      .service__p{
+        font-size: 1.5rem;
       }
     }
 
@@ -160,9 +176,7 @@
       .service__h2{
         font-size: 1.5rem;
       }
-      .service__p{
-        display: none;
-      }
     }
   }
 }
+

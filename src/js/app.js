@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
   eventListenerBack()
   eventListenerPrep()
   eventListenerMobile();
+  eventListenerMobileDisabled()
 });
 
 //----------------------EVENTS LISTENERS---------------------------
@@ -13,39 +14,50 @@ document.addEventListener('DOMContentLoaded', function() {
 function eventListenerSk() {
   const tabLinks = document.querySelector('.about-titles__link--skills');
     tabLinks.addEventListener('click', aboutDetailsSk);    
-}
+};
 
 function eventListenerEx() {
   const tabLinks = document.querySelector('.about-titles__link--experience');
     tabLinks.addEventListener('click', aboutDetailsEx);    
-}
+};
 
 function eventListenerEd() {
   const tabLinks = document.querySelector('.about-titles__link--education');
     tabLinks.addEventListener('click', aboutDetailsEd);    
-}
+};
 
 //  SERVICES
 function eventListenerFront() {
   const tabService = document.querySelector('.service__front');
     tabService.addEventListener('click', serviceDetailsFront);    
-}
+};
 
 function eventListenerBack() {
   const tabService = document.querySelector('.service__back');
     tabService.addEventListener('click', serviceDetailsBack);    
-}
+};
 
 function eventListenerPrep() {
   const tabService = document.querySelector('.service__prep');
     tabService.addEventListener('click', serviceDetailsPrep);    
-}
+};
 
 //  MOBILE
 function eventListenerMobile() {
-  const mobileMenu = document.querySelector('.header-icon');
-    mobileMenu.addEventListener('click', mobileMenu2);    
-}
+  const mobileMenu = document.querySelector('.mobile-icon');
+    mobileMenu.addEventListener('click', mobileActive);    
+};
+
+function eventListenerMobileDisabled() {
+  const mobileMenu = document.querySelectorAll('.header-nav__li');
+    //mobileMenu.addEventListener('click', mobileDisabled);    
+    //var list_imes = document.querySelectorAll('header-nav');
+   
+    for (let i = 0; i < mobileMenu.length; i++) {
+      mobileMenu[i].addEventListener("click", mobileDisabled);
+      
+    };
+};
 //----------------------VARIABLES---------------------------
 const activeLinkSk = document.querySelector('.about-titles__link--skills');
 const activeContSk = document.querySelector('.about-content--skills');
@@ -105,51 +117,42 @@ function aboutDetailsEd() {
 };
 //----------------------EVENTS FROM SERVICES---------------------------
 function serviceDetailsFront() {
-
   activeServices.classList.toggle('service__front--active');
-  //activeContEd.classList.toggle('active-tab');
+  
   if(activeServices.classList.contains('service__back--active') || activeServices.classList.contains('service__prep--active')){
     activeServices.classList.remove('service__back--active') || activeServices.classList.remove('service__prep--active');
   };
-  /*if(activeContSk.classList.contains('active-tab') || activeContEx.classList.contains('active-tab')) {
-    activeContSk.classList.remove('active-tab');
-    activeContEx.classList.remove('active-tab');
-  };*/
 };
 
 function serviceDetailsBack() {
-
   activeServices.classList.toggle('service__back--active');
-  //activeContEd.classList.toggle('active-tab');
   
  if(activeServices.classList.contains('service__front--active') || activeServices.classList.contains('service__prep--active')){
     activeServices.classList.remove('service__front--active') || activeServices.classList.remove('service__prep--active');
   };
-  /*if(activeContSk.classList.contains('active-tab') || activeContEx.classList.contains('active-tab')) {
-    activeContSk.classList.remove('active-tab');
-    activeContEx.classList.remove('active-tab');
-  };*/
 };
 
 function serviceDetailsPrep() {
-
   activeServices.classList.toggle('service__prep--active');
-  //activeContEd.classList.toggle('active-tab');
   
   if(activeServices.classList.contains('service__front--active') || activeServices.classList.contains('service__back--active')){
     activeServices.classList.remove('service__front--active') || activeServices.classList.remove('service__back--active');
   };
-  /*if(activeContSk.classList.contains('active-tab') || activeContEx.classList.contains('active-tab')) {
-    activeContSk.classList.remove('active-tab');
-    activeContEx.classList.remove('active-tab');
-  };*/
 };
 
 //----------------------EVENTS FROM MOBILE MENU---------------------------
-function mobileMenu2(){
+function mobileActive(){
   const activeMobile = document.querySelector('.header-nav');
 
-  activeMobile.classList.toggle('active-mobile');
+  activeMobile.classList.toggle('mobile-icon--active');
+  
+};
+
+function mobileDisabled(){
+  const disabledMobile = document.querySelector('.header-nav');
+
+  disabledMobile.classList.remove('mobile-icon--active');
+
   
 };
 

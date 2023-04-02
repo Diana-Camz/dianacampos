@@ -1,35 +1,22 @@
 @use 'base/variables' as v;
 @use 'base/mixins' as m;
 
-/*.about{
-  padding: 9rem 0 3rem 0;
-  color: v.$gray;
-  @include m.mobile{
-    border: solid 2px green;
-  }
-}*/
-
 .about{
   display: grid;
   grid-template-columns: 1fr 2fr;
   color: v.$gray;
-  @include m.mobile{
-    border: solid 2px red;
+  @include m.tablet{
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 20rem;
   }
 }
   
-
 .about-col-1{
-  //flex-basis: 35%;
-  @include m.mobile{
-    border: solid 1px blue;
-  }
-
   &__picture{
     display: flex;
     justify-content: center;
   }
-  
 
   &__img{
     width: 90%;
@@ -37,18 +24,14 @@
     margin-top: 12rem;
     @include m.mobile{
       width: 50%;
-      border: solid 1px yellow;
-      
-      
     }
+  }
+  @include m.tablet{
+    display: none;
   }
 }
 
 .about-col-2{
-  @include m.mobile{
-    border: solid 1px blue;
-  }
-
   &__h1{
     font-size: 5rem;
     font-weight: v.$bold;
@@ -69,13 +52,8 @@
     font-size: 1.6rem;
     text-align: justify;
     text-indent: 1rem;
-    //padding-right: 20%;
-    @include m.tablet{
-      padding-right: 0;
-    }
     @include m.mobile{
       font-size: 1.5rem;
-      padding: 0 6%;
     }
   }
 
@@ -85,15 +63,16 @@
       &__link:last-of-type{
         margin-right: 0;
       }
-    @include m.mobile{
+    @include m.tablet{
       justify-content: space-around;
-      margin-bottom: 1.5rem;
+    }
+    @include m.mobile{
+      margin-bottom: 0.8rem;
       padding: 1rem 0;
     }
 
     .active-link{
       @include m.mobile{
-        //color: v.$red;
         font-size: 1.6rem;
       }
     }
@@ -143,20 +122,19 @@
  
 .about-content{
   padding-right: 15%;
+  margin-top: 5rem;
   position: absolute;
   visibility: hidden;
   opacity: 0;
   transition: visibility 0.3s, opacity 0.7s;
   @include m.tablet{
-    padding-right: 8%;
+    padding: 0;
+    max-width: 70vw;
+    text-align: justify;
   }
   @include m.mobile{
-    padding-right: 0%;
-    text-align: center;
-    width: 70%;
-    left: auto;
-    right: auto;
-    
+    padding: 0;
+    max-width: 90vw;
   }
   .about-content__li{
     list-style: none;
@@ -176,6 +154,8 @@
       }
     }
   }
+
+
 }
 
 .about-content--active{

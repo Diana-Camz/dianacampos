@@ -4,19 +4,15 @@
 .contact{
   display: grid;
   grid-template-columns: 1fr 2fr;
+  gap: 0.5rem;
 
   @include m.mobile{
     display: flex;
     flex-direction: column;
-    align-items: center;
   }
 }
 
 .contact-info{
-  @include m.mobile{
-    width: 95%;
-    border: solid 1px white;
-  }
   &__p{
     margin-top: 2rem;
     font-size: 1.5rem;
@@ -49,11 +45,6 @@
 }
 
 .contact-form{
-  @include m.mobile{
-    width: 95%;
-    border: solid 1px yellow;
-  }
-
   .form{
     width: 100%;
 

@@ -23,11 +23,11 @@
           <img class="header__img" loading="lazy" src="src/img/image-logo.jpg" alt="Logo Image">
         </picture>
       </a>
-      <div class="header-icon">
+      <div class="mobile-icon">
         <i class="fa-solid fa-bars"></i>
       </div>
       <nav class="header-nav">
-      <ul>
+      <ul class="header-nav__ul">
         <li class="header-nav__li"><a class="header-nav__a" href="#main">Home</a></li>
         <li class="header-nav__li"><a class="header-nav__a" href="#about">About</a></li>
         <li class="header-nav__li"><a class="header-nav__a" href="#services">Services</a></li>
@@ -37,6 +37,7 @@
     </nav>
   </div>
 </header>
+
 <main id="main">
   <div class="main">
     <div class="main-text">
@@ -51,6 +52,7 @@
     </div>
   </div>
 </main>
+
                         <!------------- ABOUT -------------->
 <section id="about">
   <div class="container">
@@ -67,26 +69,26 @@
         <p class="about-col-2__p">I am currently a Web Development student on my own, and if I am not practicing you can find me exercising or enjoying the afternoon with my boyfriend or my cats.</p>
         <div class="about-titles">
           <p class="about-titles__link about-titles__link--skills">Skills</p>
+          <div class="about-content about-content--skills">
+            <ul class="about-content__ul">
+              <li class="about-content__li"><span class="about-content__li--span">Organizational capacity:</span><br>Anticipation, planning, adaptation and time management to fulfill the requested tasks.</li>
+              <li class="about-content__li"><span class="about-content__li--span">​Communication Skills:</span><br>listening and communication skills, managing to communicate my ideas, opinions and intentions in a clear, assertive and open to debate manner.</li>
+              <li class="about-content__li"><span class="about-content__li--span">​Flexibility:</span><br>I have managed to adapt to the different activities that the position where I have worked has required.</li>
+            </ul>
+          </div>
           <p class="about-titles__link about-titles__link--experience">Experience</p>
+          <div class="about-content about-content--experience">
+            <ul>
+              <li class="about-content__li"><span></span><br>For now I have no experience in any company, all the knowledge that I have acquired and projects that I have carried out are thanks to the learning that I obtained from the internet on my own.</li>
+            </ul>
+          </div>
           <p class="about-titles__link about-titles__link--education">Education</p>
-        </div>
-        <div class="about-content about-content--skills">
-          <ul>
-            <li class="about-content__li"><span class="about-content__li--span">Organizational capacity:</span><br>Anticipation, planning, adaptation and time management to fulfill the requested tasks.</li>
-            <li class="about-content__li"><span class="about-content__li--span">​Communication Skills:</span><br>listening and communication skills, managing to communicate my ideas, opinions and intentions in a clear, assertive and open to debate manner.</li>
-            <li class="about-content__li"><span class="about-content__li--span">​Flexibility:</span><br>I have managed to adapt to the different activities that the position where I have worked has required.</li>
-          </ul>
-        </div>
-        <div class="about-content about-content--experience">
-          <ul>
-            <li class="about-content__li"><span></span><br>For now I have no experience in any company, all the knowledge that I have acquired and projects that I have carried out are thanks to the learning that I obtained from the internet on my own.</li>
-          </ul>
-        </div>
-        <div class="about-content about-content--education">
-          <ul>
-            <li class="about-content__li"><span class="about-content__li--span">​Bachelor's Degree</span><br>​Psychology 2013-2018</li>
-            <li class="about-content__li"><span class="about-content__li--span">Udemy Course</span><br>Complete web course with HTML, CSS, JS AJAX, PHP, and MySQL: Juan Pablo de la Torre. 344/798 classes.</li>
-          </ul>
+          <div class="about-content about-content--education">
+            <ul>
+              <li class="about-content__li"><span class="about-content__li--span">​Bachelor's Degree</span><br>​Psychology 2013-2018</li>
+              <li class="about-content__li"><span class="about-content__li--span">Udemy Course</span><br>Complete web course with HTML, CSS, JS AJAX, PHP, and MySQL: Juan Pablo de la Torre. 344/798 classes.</li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>   
@@ -102,7 +104,7 @@
         <i class="service__icon fa-sharp fa-solid fa-code"></i>
         <h2 class="service__h2">Frontend</h2>
         <p class="service__p">I have carried out different projects that are related to the Frontend area. My next step is to take <b class="service__b">React</b> courses and start doing projects with this framework.</p>
-        <a href="#" class="service__a">Learn more</a>
+        <!--<a href="#" class="service__a">Learn more</a>-->
         <i class="service__icon2 fa-brands fa-html5"></i>
         <i class="service__icon2 fa-brands fa-css3-alt"></i>
         <i class="service__icon2 fa-brands fa-js"></i>
@@ -111,7 +113,7 @@
         <i class="service__icon fa-solid fa-gears"></i>
         <h2 class="service__h2">Backend</h2>
         <p class="service__p">I have developed simple CRUDs with <b class="service__b">PHP</b> and <b class="service__b">SQL</b>. However, it is an area in which I would like to continue training by learning to do CRUDs with other languages.</p>
-        <a href="#" class="service__a">Learn more</a>
+        <!--<a href="#" class="service__a">Learn more</a>-->
         <i class="service__icon2 fa-brands fa-php"></i>
         <i class="service__icon2 fa-solid fa-database"></i>
       </div>
@@ -119,7 +121,7 @@
         <i class="service__icon fa-solid fa-wrench"></i>
         <h2 class="service__h2">Preprocessors and tools</h2>
         <p class="service__p">I have done projects using tools like <b class="service__b">Gulp</b>, <b class="service__b">npm</b> and <b class="service__b">GIT</b>. I also use <b class="service__b">SASS</b> as a pre-processor to improve the style sheet code and <b class="service__p">BEM</b> as a design methodology. I would like to learn other tools that allow me to improve and optimize my projects. Like for example, <b class="service__b">VITE</b>, <b class="service__b">SUITE CSS</b>, <b class="service__b">ESLINT</b> and <b class="service__b">Figma</b>.</p>
-        <a href="#" class="service__a">Learn more</a>
+        <!--<a href="#" class="service__a">Learn more</a>-->
         <i class="service__icon2 fa-brands fa-gulp"></i>
         <i class="service__icon2 fa-brands fa-sass"></i>
         <i class="service__icon2 fa-brands fa-git-alt"></i>
@@ -188,13 +190,11 @@
     <div class="contact">
       <div class="contact-info">
         <p class="contact-info__p"><i class="contact-info__p--i fa-solid fa-envelope"></i>dcampos0495@gmail.com</p>
-        <p class="contact-info__p"><i class="contact-info__p--i fa-solid fa-square-phone"></i>+52 1 312 109 6301</p>
         <div class="contact-icons">
           <a class="contact-icons__a" href="https://www.linkedin.com/in/diana-camz"><i class="fa-brands fa-linkedin"></i></a>
           <a class="contact-icons__a" href="https://github.com/Diana-Camz"><i class="fa-brands fa-github"></i></i></a>
           <a class="contact-icons__a" href="https://www.facebook.com/dianacamza/"><i class="fa-brands fa-facebook"></i></a>
           <a class="contact-icons__a" href="https://www.instagram.com/diana_camz/"><i class="fa-brands fa-instagram"></i></a>
-          <a class="contact-icons__a" href="https://discord.gg/YNucNF3KnY"><i class="fa-brands fa-discord"></i></a>
         </div>
         <a href="src/img/my-cv-diana-campos.pdf" download class="button button--info">Download CV</a>
       </div>
@@ -222,3 +222,45 @@
 <script src="build/js/bundle.min.js"></script>
 </body>
 </html>
+
+<!--<section id="about">
+  <div class="container">
+    <div class="about">
+      <div class="about-col-1">
+        <picture class="about-col-1__picture">
+          <source loading="lazy" srcset="build/img/user.webp" type="image/webp">
+          <img class="about-col-1__img" loading="lazy" src="src/img/user.jpg" alt="User Image">
+        </picture>
+      </div>
+      <div class="about-col-2">
+        <h1  class="about-col-2__h1">About me</h1>
+        <p class="about-col-2__p">I am a Psychologist looking for the job of my dreams, which allows me to set new goals, feel new motivations within a challenging environment that challenges my knowledge and skills. I enjoy well-structured code and am passionate about knowing that it can always improve.</p><br>
+        <p class="about-col-2__p">I am currently a Web Development student on my own, and if I am not practicing you can find me exercising or enjoying the afternoon with my boyfriend or my cats.</p>
+        <div class="about-titles">
+          <p class="about-titles__link about-titles__link--skills">Skills</p>
+          <p class="about-titles__link about-titles__link--experience">Experience</p>
+          <p class="about-titles__link about-titles__link--education">Education</p>
+        </div> </div>
+        <div class="about-content about-content--skills">
+          <ul>
+            <li class="about-content__li"><span class="about-content__li--span">Organizational capacity:</span><br>Anticipation, planning, adaptation and time management to fulfill the requested tasks.</li>
+            <li class="about-content__li"><span class="about-content__li--span">​Communication Skills:</span><br>listening and communication skills, managing to communicate my ideas, opinions and intentions in a clear, assertive and open to debate manner.</li>
+            <li class="about-content__li"><span class="about-content__li--span">​Flexibility:</span><br>I have managed to adapt to the different activities that the position where I have worked has required.</li>
+          </ul>
+        </div>
+        <div class="about-content about-content--experience">
+          <ul>
+            <li class="about-content__li"><span></span><br>For now I have no experience in any company, all the knowledge that I have acquired and projects that I have carried out are thanks to the learning that I obtained from the internet on my own.</li>
+          </ul>
+        </div>
+        <div class="about-content about-content--education">
+          <ul>
+            <li class="about-content__li"><span class="about-content__li--span">​Bachelor's Degree</span><br>​Psychology 2013-2018</li>
+            <li class="about-content__li"><span class="about-content__li--span">Udemy Course</span><br>Complete web course with HTML, CSS, JS AJAX, PHP, and MySQL: Juan Pablo de la Torre. 344/798 classes.</li>
+          </ul>
+        </div>
+        --- comentario</div>
+      </div>
+    </div>   
+  </div>
+</section>-->
