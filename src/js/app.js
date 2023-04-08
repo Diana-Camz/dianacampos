@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
   eventListenerSk();
   eventListenerEx();
   eventListenerEd();
+  //eventListenerAbout();
   eventListenerFront()
   eventListenerBack()
   eventListenerPrep()
@@ -11,6 +12,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
 //----------------------EVENTS LISTENERS---------------------------
 //  ABOUT
+/*function eventListenerAbout() {
+  const tabLinks = document.querySelectorAll('.about-titles__link');
+  for (let i = 0; i < tabLinks.length; i++){
+    tabLinks[i].addEventListener('click', aboutDetails);
+  }   
+}*/
 function eventListenerSk() {
   const tabLinks = document.querySelector('.about-titles__link--skills');
     tabLinks.addEventListener('click', aboutDetailsSk);    
@@ -50,15 +57,14 @@ function eventListenerMobile() {
 
 function eventListenerMobileDisabled() {
   const mobileMenu = document.querySelectorAll('.header-nav__li');
-    //mobileMenu.addEventListener('click', mobileDisabled);    
-    //var list_imes = document.querySelectorAll('header-nav');
    
     for (let i = 0; i < mobileMenu.length; i++) {
       mobileMenu[i].addEventListener("click", mobileDisabled);
-      
     };
 };
 //----------------------VARIABLES---------------------------
+/*const activeLink = document.querySelector('.about-titles__link');
+const activeCont = document.querySelector('.about-content');*/
 const activeLinkSk = document.querySelector('.about-titles__link--skills');
 const activeContSk = document.querySelector('.about-content--skills');
 
@@ -72,6 +78,10 @@ const activeServices = document.querySelector('.services');
 
 //----------------------EVENTS FROM ABOUT---------------------------
 //SKILLS:
+/*function aboutDetails() {
+  activeLink.classList.toggle('about-titles__link--active');
+  activeCont.classList.toggle('about-content--active');
+}*/
 function aboutDetailsSk() {
   activeLinkSk.classList.toggle('about-titles__link--active');
   activeContSk.classList.toggle('about-content--active');
@@ -173,5 +183,5 @@ function handleSubmit(e){
   const message = document.querySelector('Message');
 
   console.log(name);
-  //window.location.href=`mailto:dcampos0495@gmail.com?subject=${name}%7C%20has%20contacted%20you%20from%20your%20Portolio&body=Name%3A%20${name}%0AEmail%3A%20${email}%0AMessage%3A%20${message}`
-*/
+  window.location.href=`mailto:dcampos0495@gmail.com?subject=${name}%7C%20has%20contacted%20you%20from%20your%20Portolio&body=Name%3A%20${name}%0AEmail%3A%20${email}%0AMessage%3A%20${message}`
+}*/

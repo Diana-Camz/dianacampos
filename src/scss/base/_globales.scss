@@ -9,8 +9,8 @@ html {
   box-sizing: border-box;
   background: v.$black1; 
   scroll-behavior: smooth;
-  @include m.mobile{
-    scroll-padding-top: 4rem;
+  @include m.tablet{
+    scroll-padding-top: 10rem;
   }
 }
 
@@ -60,8 +60,8 @@ h4 {
 /*---------classes--------*/
 .container {
   padding: 6rem 10%;
-  @include m.mobile{
-    padding: 3rem 2%;
+  @include m.tablet{
+    padding: 10rem 2%;
   }
   &__h1{
     font-size: 6rem;

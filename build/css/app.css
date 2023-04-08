@@ -7,9 +7,9 @@ html {
   background: #1a1a1a;
   scroll-behavior: smooth;
 }
-@media (max-width: 480px) {
+@media (max-width: 924px) {
   html {
-    scroll-padding-top: 4rem;
+    scroll-padding-top: 10rem;
   }
 }
 
@@ -58,9 +58,9 @@ h4 {
 .container {
   padding: 6rem 10%;
 }
-@media (max-width: 480px) {
+@media (max-width: 924px) {
   .container {
-    padding: 3rem 2%;
+    padding: 10rem 2%;
   }
 }
 .container__h1 {
@@ -579,10 +579,15 @@ template {
 }
 
 /* HEADER */
+@media (max-width: 924px) {
+  .main {
+    padding: 30vh 6% 10vh 6%;
+  }
+}
 @media (max-width: 480px) {
   .main {
     display: flex;
-    padding: 30vh 6% 0 6%;
+    padding: 30vh 6% 20vh 6%;
     flex-direction: column-reverse;
     justify-content: space-between;
   }
@@ -598,6 +603,7 @@ template {
 }
 @media (max-width: 924px) {
   .main-text {
+    margin-top: 10%;
     font-size: 2rem;
   }
 }
@@ -615,14 +621,15 @@ template {
   margin-top: 2rem;
   font-size: 5.5rem;
 }
+@media (max-width: 924px) {
+  .main-text__h1 {
+    padding-right: 10%;
+    font-size: 3.7rem;
+  }
+}
 @media (max-width: 480px) {
   .main-text__h1 {
     font-size: 3.5rem;
-  }
-}
-@media (max-width: 924px) {
-  .main-text__h1 {
-    font-size: 3.7rem;
   }
 }
 .main-text__span {
@@ -682,7 +689,7 @@ template {
   font-size: 5rem;
   font-weight: 600;
   color: #FFFFFF;
-  margin: 0 0 1.2rem;
+  margin: 1.2rem 0;
   padding: 5rem 0 0 0;
   text-align: center;
 }
