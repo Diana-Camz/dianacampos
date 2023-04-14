@@ -201,7 +201,7 @@
   <h1 class="container__h1">Contact Me</h1>
     <div class="contact">
       <div class="contact-info">
-        <p class="contact-info__p"><i class="contact-info__p--i fa-solid fa-envelope"></i>dcampos0495@gmail.com</p>
+       <!-- <p class="contact-info__p"><i class="contact-info__p--i fa-solid fa-envelope"></i>dcampos0495@gmail.com</p>-->
         <div class="contact-icons">
           <a class="contact-icons__a" href="https://www.linkedin.com/in/diana-camz"><i class="fa-brands fa-linkedin"></i></a>
           <a class="contact-icons__a" href="https://github.com/Diana-Camz"><i class="fa-brands fa-github"></i></i></a>
@@ -211,13 +211,15 @@
         <a href="src/img/cv_diana-camz.pdf" download class="button button--info">Download CV</a>
       </div>
       <div class="contact-form">
-          <form id="form" class="form">
+          <form id="form" class="form" method="POST">
           <p class="warning" id="warning"></p>
           <p class="send" id="send"></p>
           <input type="text" id="name" name="name" placeholder="Your Name" class="form__input">
           <input type="email" id="email" name="email" placeholder="Your Email" class="form__input">
           <textarea id="message" name="message" rows="6" placeholder="Your Message" class="form__input"></textarea>
-          <button type="submit" id="button" class="button button--form">Send Message</button>
+            <div class="g-recaptcha" data-theme="dark" data-size="normal" data-sitekey="6LenKIclAAAAAM7htHkJ-oHTpo7RCYq9NIkqWrj7"></div>
+            <button type="submit" id="button" class="button button--form">Send Message</button>
+          
         </form>
       </div>
     </div>
@@ -235,5 +237,6 @@
 <script src="build/js/bundle.min.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 <script type="text/javascript">emailjs.init('OPolKIE3q4pFsbqPw')</script>
+<script src="https://www.google.com/recaptcha/api.js?hl=en" async defer></script>
 </body>
 </html>

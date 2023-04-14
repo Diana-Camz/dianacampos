@@ -179,41 +179,46 @@ const send = document.querySelector('#send');
 form.addEventListener("submit", e=>{
   warnings.innerHTML = "";
   send.innerHTML = "";
+  
   e.preventDefault();
   let warning = "";
   let rgxEmail = /^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$/ ;
   let validate = true;
-
+  let response = grecaptcha.getResponse();
 
   if(names.value.length < 3){
-    warning += `Please write a name!! <br>`;
+    warning += `Please write a name !! <br>`;
     validate = false;
   }
 
   if(!rgxEmail.test(email.value)){
-    warning += `Please write a valid email!! <br>`;
+    warning += `Please write a valid email !! <br>`;
     validate = false;
   }
 
   if(message.value.length < 10){
-    warning += `Your message must contain at least 10 characters!! :) <br>`;
+    warning += `Your message must contain at least 10 characters !! <br>`;
+    validate = false;
+  }
+
+  if(response.length == 0) { // validation of ReCaptcha
+    warning += `You have to probe that you are not a robot !! <br>`;
     validate = false;
   }
 
   if(!validate){
-    warnings.innerHTML = warning;
+    warnings.innerHTML = warning;   
   } else { //Send the email from API "emailJs"
     const serviceID = 'default_service';
     const templateID = 'template_60x0eac';
     let emailSend = "";
     
-
-   emailjs.sendForm(serviceID, templateID, form)
-   form.reset();
-   emailSend += `Your message has been sent!`;
-   send.innerHTML = emailSend;
-  } setTimeout(()=>{
-    emailSend = ` `;
-   send.innerHTML = emailSend;
-  }, 3000);
+    emailjs.sendForm(serviceID, templateID, form)
+    form.reset();
+    emailSend += `Your message has been sent !!`;
+    send.innerHTML = emailSend;
+    } setTimeout(()=>{
+      emailSend = ` `;
+    send.innerHTML = emailSend;
+    }, 3000);
 });

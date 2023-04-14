@@ -1099,21 +1099,24 @@ template {
   }
 }
 
-.contact-info__p {
-  margin-top: 2rem;
-  font-size: 1.5rem;
-}
-.contact-info__p--i {
-  color: #ff004f;
-  margin-right: 1.5rem;
-  font-size: 2.5rem;
+.contact-info {
+  /*&__p{
+    margin-top: 2rem;
+    font-size: 1.5rem;
+
+    &--i{
+      color: v.$red;
+      margin-right: 1.5rem;
+      font-size: 2.5rem;
+    }
+  }*/
 }
 .contact-info .contact-icons {
   margin-top: 3rem;
 }
 .contact-info .contact-icons__a {
   text-decoration: none;
-  font-size: 3rem;
+  font-size: 4rem;
   margin-right: 1.5rem;
   color: #ababab;
   display: inline-block;
