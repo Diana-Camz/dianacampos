@@ -105,18 +105,14 @@
 
     &__link:hover::after{
       width: 50%;
-      @include m.mobile{
-        width: 0%;
+      @include m.tablet{
+        width: 100%;
       }
     }
   }
 
   .about-titles__link--active::after{
     width: 50%;
-    @include m.mobile{
-      width: 100%;
-      
-    }
   }
 }
  

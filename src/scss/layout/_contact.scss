@@ -48,6 +48,18 @@
   .form{
     width: 100%;
 
+    .warning{
+      font-size: 1.8rem;
+      text-align: center;
+      color: v.$red2;
+    }
+
+    .send{
+      font-size: 1.8rem;
+      text-align: center;
+      color: #316D2C;
+    }
+
     &__input{
       width: 100%;
       border: 0;

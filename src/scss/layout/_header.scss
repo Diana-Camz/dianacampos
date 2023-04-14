@@ -53,6 +53,7 @@
       justify-content: space-around;
       align-items: center;
       width: 100%;
+
       
     }
     @include m.mobile{
@@ -130,6 +131,9 @@
     left: 0;
     bottom: -0.6rem;
     transition: 0.5s;
+    @include m.mobile{
+      transition: none;
+    }
   }
   
   &:hover::after{

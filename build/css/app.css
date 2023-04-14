@@ -96,6 +96,9 @@ h4 {
 .button:hover {
   background-color: #ff004f;
 }
+.button--disabled {
+  display: none;
+}
 
 .button--info {
   display: inline-block;
@@ -574,6 +577,11 @@ template {
   bottom: -0.6rem;
   transition: 0.5s;
 }
+@media (max-width: 480px) {
+  .header-nav__a::after {
+    transition: none;
+  }
+}
 .header-nav__a:hover::after {
   width: 100%;
 }
@@ -768,18 +776,13 @@ template {
 .about-col-2 .about-titles__link:hover::after {
   width: 50%;
 }
-@media (max-width: 480px) {
+@media (max-width: 924px) {
   .about-col-2 .about-titles__link:hover::after {
-    width: 0%;
+    width: 100%;
   }
 }
 .about-col-2 .about-titles__link--active::after {
   width: 50%;
-}
-@media (max-width: 480px) {
-  .about-col-2 .about-titles__link--active::after {
-    width: 100%;
-  }
 }
 
 .about-content {
@@ -876,10 +879,13 @@ template {
 }
 @media (max-width: 480px) {
   .services .service {
+    display: flex;
+    flex-direction: column;
     padding: 1.5rem;
     margin: 1rem 0;
     width: 95vw;
-    height: 25rem;
+    height: 35rem;
+    justify-content: center;
     scroll-snap-align: center;
     object-fit: contain;
     transition: none;
@@ -923,7 +929,7 @@ template {
 }
 @media (max-width: 480px) {
   .services .service__p {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
   }
 }
 .services .service__b {
@@ -1008,7 +1014,7 @@ template {
     overflow-x: scroll;
     padding: 0 3rem 0 3rem;
     scroll-snap-type: x mandatory;
-    overscroll-behavior-x: contain;
+    overscroll-behavior-x: auto;
   }
 }
 
@@ -1019,7 +1025,7 @@ template {
 }
 .proyect__img {
   width: 100%;
-  height: 70rem;
+  height: 35rem;
   opacity: 0.9;
   border-radius: 1rem;
   display: block;
@@ -1043,13 +1049,16 @@ template {
   text-align: center;
   font-size: 1.6rem;
   transition: height 0.5s;
+  /*&__a:last-of-type{
+    margin: 2rem 0 0 2rem;
+  }*/
 }
 .proyect .proyect-info__h3 {
   margin-bottom: 2rem;
 }
 .proyect .proyect-info__a {
   display: inline-block;
-  margin: 2rem 2rem 0 0;
+  margin-top: 3rem;
   color: #ff004f;
   text-decoration: none;
   font-size: 1.8rem;
@@ -1060,9 +1069,6 @@ template {
   border-radius: 50%;
   text-align: center;
 }
-.proyect .proyect-info__a:last-of-type {
-  margin: 2rem 0 0 2rem;
-}
 .proyect:hover .proyect__img {
   transform: scale(1.1);
 }
@@ -1072,10 +1078,9 @@ template {
 @media (max-width: 480px) {
   .proyect {
     font-size: 1.3rem;
-    padding: 1.5rem;
     margin: 1rem 0;
     width: 95vw;
-    height: 50rem;
+    height: 35rem;
     scroll-snap-align: center;
     object-fit: contain;
     transition: none;
@@ -1121,6 +1126,16 @@ template {
 
 .contact-form .form {
   width: 100%;
+}
+.contact-form .form .warning {
+  font-size: 1.8rem;
+  text-align: center;
+  color: #b54769;
+}
+.contact-form .form .send {
+  font-size: 1.8rem;
+  text-align: center;
+  color: #316D2C;
 }
 .contact-form .form__input {
   width: 100%;

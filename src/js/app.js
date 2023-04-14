@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
   eventListenerMobileDisabled()
 });
 
-//----------------------EVENTS LISTENERS---------------------------
+//----------------------EVENT LISTENERS---------------------------
 //  ABOUT
 /*function eventListenerAbout() {
   const tabLinks = document.querySelectorAll('.about-titles__link');
@@ -166,22 +166,54 @@ function mobileDisabled(){
   
 };
 
-//----------------------SEND EMAIL FROM FORM---------------------------
 
-/*const formId = document.querySelector('#form');
-//const mailToId = document.querySelector('#mailTo')
+//----------------------VALIDATION AND SUBMISSION OF THE FORM ---------------------------
+const form = document.querySelector('#form');
+const names = document.querySelector('#name');
+const email = document.querySelector('#email');
+const message = document.querySelector('#message');
+const warnings = document.querySelector('#warning');
+const send = document.querySelector('#send');
 
-formId.addEventListener('submit', handleSubmit);
 
-function handleSubmit(e){
+form.addEventListener("submit", e=>{
+  warnings.innerHTML = "";
+  send.innerHTML = "";
   e.preventDefault();
-  //console.log("enviado desde formulario");
-  const form = new FormData(this);
-  //console.log(form.get('Message'));
-  const name = document.querySelector('Name');
-  const email = document.querySelector('Email');
-  const message = document.querySelector('Message');
+  let warning = "";
+  let rgxEmail = /^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$/ ;
+  let validate = true;
 
-  console.log(name);
-  window.location.href=`mailto:dcampos0495@gmail.com?subject=${name}%7C%20has%20contacted%20you%20from%20your%20Portolio&body=Name%3A%20${name}%0AEmail%3A%20${email}%0AMessage%3A%20${message}`
-}*/
+
+  if(names.value.length < 3){
+    warning += `Please write a name!! <br>`;
+    validate = false;
+  }
+
+  if(!rgxEmail.test(email.value)){
+    warning += `Please write a valid email!! <br>`;
+    validate = false;
+  }
+
+  if(message.value.length < 10){
+    warning += `Your message must contain at least 10 characters!! :) <br>`;
+    validate = false;
+  }
+
+  if(!validate){
+    warnings.innerHTML = warning;
+  } else { //Send the email from API "emailJs"
+    const serviceID = 'default_service';
+    const templateID = 'template_60x0eac';
+    let emailSend = "";
+    
+
+   emailjs.sendForm(serviceID, templateID, form)
+   form.reset();
+   emailSend += `Your message has been sent!`;
+   send.innerHTML = emailSend;
+  } setTimeout(()=>{
+    emailSend = ` `;
+   send.innerHTML = emailSend;
+  }, 3000);
+});
