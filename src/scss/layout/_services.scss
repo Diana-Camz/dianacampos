@@ -9,6 +9,7 @@
   transition: 0.5s;
   .service:hover{
     transform: translateY(-1rem);
+    cursor: pointer;
     @include m.tablet{
       transform: none;
     }

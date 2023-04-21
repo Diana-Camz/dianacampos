@@ -841,6 +841,7 @@ template {
 }
 .services .service:hover {
   transform: translateY(-1rem);
+  cursor: pointer;
 }
 @media (max-width: 924px) {
   .services .service:hover {
@@ -1022,6 +1023,7 @@ template {
   border-radius: 1rem;
   position: relative;
   overflow: hidden;
+  cursor: pointer;
 }
 .proyect__img {
   width: 100%;
